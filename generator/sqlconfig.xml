@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE generatorConfiguration PUBLIC
+   "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="/u01/data/eclipse-workspace/springbootstudy/lib/ojdbc8.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@localhost:1521:CDB1" userId="system"
+			password="oracle" />
+
+		<javaModelGenerator targetPackage="com.study.entity"
+			targetProject="springbootstudy" />
+		<sqlMapGenerator targetPackage="com.study.mapper"
+			targetProject="springbootstudy" />
+		<javaClientGenerator targetPackage="com.study.mapper"
+			targetProject="springbootstudy" type="XMLMAPPER" />
+
+		<!-- <table schema="csdemo" tableName="employee" /> -->
+		<!-- <table tableName="employee" /> -->
+		<table tableName="department" />
+	</context>
+</generatorConfiguration>
